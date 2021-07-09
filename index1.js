@@ -6,9 +6,10 @@ sp.style.color = `blue`
 
 
 
-window.addEventListener(`mousemove`, function (e) {
+document.addEventListener(`mousemove`, function (e) {
   console.log(`x=${e.clientX},y=${e.clientY}`)
   sp.innerText = `x=${e.clientX},y=${e.clientY}`
-  sp.style.transform = 'translateX(x)'
-  sp.style.transform = `translatrY(y)`
+  //sp.style.left = `${e.clientX}px`
+  //sp.style.top = `${e.clientY}px`
+  sp.style.transform = `translate(${e.clientX}px,${e.clientY}px)`
 })
